@@ -1,0 +1,238 @@
+/* Reset basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333333;
+    display: flex;
+    flex-direction: column; /* Arrange elements in a column */
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Navbar Styling */
+/* Navbar Styling */
+.navbar {
+    width: 100%; /* Make navbar span full width */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4CAF50;
+    padding: 15px 20px;
+    color: white;
+    font-size: 1.2rem;
+    position: sticky; /* Keep navbar at the top on scroll */
+    top: 0;
+}
+
+.navbar h4 {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    color: white;
+    margin: 0;
+}
+
+.navbar h4 i {
+    margin-right: 8px;
+    font-size: 1.5rem;
+}
+
+/* Styling for nav-links */
+.nav-links {
+    display: flex;
+    gap: 20px; /* Space between each link */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a i {
+    margin-right: 5px;
+    font-size: 1.3rem;
+}
+
+.nav-links a:hover {
+    color: #d4f1d4; /* Lighten color on hover */
+}
+
+/* Container Styling */
+.container {
+    margin-top: 20px; /* Add space below the navbar */
+    text-align: center;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 700px;
+}
+
+
+
+/* Heading */
+h1 {
+    color: #4CAF50;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+/* Seasons */
+.seasons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.season-item {
+    display: flex;
+    align-items: center;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.season-item:hover {
+    background-color: #45a049;
+}
+
+.season-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+/* Products */
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #333333;
+    span.title{font-size: 10000px;}
+}
+
+.product-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+/* Larger text for product names */
+.product-name {
+    font-size: 1.5rem; /* Increase this value as needed */
+    font-weight: bold;
+    color: #333333;
+    margin-top: 10px;
+    text-align: center;
+}
+
+
+.product-item:hover .product-image {
+    transform: scale(1.1);
+}
+
+/* Profiles */
+
+.container3 {
+    text-align: center;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    width: 50rem;
+    max-width: 1500px;
+    height:50rem;
+    max-height: 1000px;
+}
+
+.search-bar {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+    font-size: 1rem;
+}
+
+.profiles {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.profile-card {
+    padding: 15px;
+    background-color: #e3f2fd;
+    border: 1px solid #bbdefb;
+    border-radius: 5px;
+    text-align: left;
+    font-size: 1.1rem;
+}
+
+.profile-card h2 {
+    margin-bottom: 5px;
+    color: #1976d2;
+}
+
+.profile-card p {
+    margin: 5px 0;
+    color: #555555;
+}
+
+.profile-container {
+    text-align: center;
+    padding: 2rem;
+}
+
+.profile-box {
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem;
+}
+
+.profile-card {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    width: 40%;
+    background-color: #f9f9f9;
+}
+
+.agreement-button {
+    margin-top: 2rem;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
