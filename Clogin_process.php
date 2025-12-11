@@ -2,8 +2,8 @@
 // Start the session to track user login
 session_start();
 
-// Database file path
-$dbFile = 'my.db'; // Adjust this to match your SQLite database file location
+// Database file path - use /tmp for Vercel compatibility
+$dbFile = isset($_ENV['VERCEL']) ? '/tmp/my.db' : 'my.db'; // Adjust this to match your SQLite database file location
 
 try {
     // Create a new PDO instance

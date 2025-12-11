@@ -8,9 +8,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $address = $_POST['address'] ?? '';
     $crops = $_POST['crops'] ?? '';
 
+    // Database file path - use /tmp for Vercel compatibility
+    $dbFile = isset($_ENV['VERCEL']) ? '/tmp/my.db' : 'my.db';
+
     try {
         // Connect to the SQLite database
-        $db = new PDO('sqlite:my.db');
+        $db = new PDO("sqlite:$dbFile");
         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         // Create the Farmers table if it doesn't exist

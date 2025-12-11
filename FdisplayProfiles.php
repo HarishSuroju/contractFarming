@@ -6,9 +6,12 @@ session_start();
 $farmerId = $_SESSION['farmer_id']  ?? '';
 $contractorId = $_GET['contractorId'] ?? '';
 
+// Database file path - use /tmp for Vercel compatibility
+$dbFile = isset($_ENV['VERCEL']) ? '/tmp/my.db' : 'my.db';
+
 // Connect to the database
 try {
-    $db = new PDO('sqlite:my.db');
+    $db = new PDO("sqlite:$dbFile");
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // Fetch farmer profile

@@ -2,9 +2,12 @@
 // Get the selected crop from the URL parameter
 $product = $_GET['product'] ?? '';
 
+// Database file path - use /tmp for Vercel compatibility
+$dbFile = isset($_ENV['VERCEL']) ? '/tmp/my.db' : 'my.db';
+
 try {
     // Connect to the SQLite database
-    $db = new PDO('sqlite:my.db');
+    $db = new PDO("sqlite:$dbFile");
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // Fetch farmers who grow the selected crop

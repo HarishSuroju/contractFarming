@@ -5,10 +5,13 @@ session_start();
 $farmerId = $_SESSION['farmer_id'] ?? '';
 $contractorId = $_GET['contractorId'] ?? '';
 
+// Database file path - use /tmp for Vercel compatibility
+$dbFile = isset($_ENV['VERCEL']) ? '/tmp/my.db' : 'my.db';
+
 if ($farmerId && $contractorId) {
     try {
         // Connect to SQLite database
-       $db = new PDO('sqlite:my.db');
+        $db = new PDO("sqlite:$dbFile");
     echo "Connected to the database successfully.";
 } catch (PDOException $e) {
     echo "Connection failed: " . $e->getMessage();

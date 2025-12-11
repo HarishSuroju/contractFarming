@@ -2,8 +2,8 @@
 // Start session (optional, in case you want to store session data later)
 session_start();
 
-// Database file path
-$dbFile = 'my.db'; // Adjust this to match your SQLite database file location
+// Database file path - use /tmp for Vercel compatibility
+$dbFile = isset($_ENV['VERCEL']) ? '/tmp/my.db' : 'my.db'; // Adjust this to match your SQLite database file location
 
 try {
     // Create a new PDO instance to connect to SQLite
