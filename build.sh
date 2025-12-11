@@ -1,5 +1,12 @@
 #!/bin/bash
 
-# Copy database files to tmp directory for Vercel deployment
+# Create tmp directory if it doesn't exist
 mkdir -p /tmp
-cp -n my.db /tmp/my.db 2>/dev/null || true
+
+# Copy database file to tmp directory if it exists
+if [ -f "my.db" ]; then
+  cp my.db /tmp/my.db
+  echo "Copied existing database to /tmp/my.db"
+else
+  echo "No existing database found. Will be created on first access."
+fi
