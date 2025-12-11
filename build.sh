@@ -10,3 +10,10 @@ if [ -f "my.db" ]; then
 else
   echo "No existing database found. Will be created on first access."
 fi
+
+# Also copy to the API directory for Vercel
+mkdir -p api/tmp
+if [ -f "my.db" ]; then
+  cp my.db api/tmp/my.db
+  echo "Copied existing database to api/tmp/my.db"
+fi
